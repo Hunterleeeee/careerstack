@@ -8,8 +8,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f7fa;
+    color: #111111;
+    background-color: #F5F7FA;
 }
 
 .container {
@@ -38,7 +38,7 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #1a73e8;
+    color: #165DFF;
 }
 
 .nav-links {
@@ -52,22 +52,22 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #111111;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #1a73e8;
+    color: #165DFF;
 }
 
 .nav-links a.active {
-    color: #1a73e8;
-    border-bottom: 2px solid #1a73e8;
+    color: #165DFF;
+    border-bottom: 2px solid #165DFF;
 }
 
 .pro-btn {
-    background-color: #1a73e8;
+    background-color: #165DFF;
     color: white !important;
     padding: 8px 16px;
     border-radius: 4px;
@@ -75,7 +75,7 @@ nav {
 }
 
 .pro-btn:hover {
-    background-color: #1557b0;
+    background-color: #1149CC;
 }
 
 .mobile-menu-btn {
@@ -88,7 +88,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    background: linear-gradient(135deg, #165DFF, #1149CC);
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -112,7 +112,7 @@ nav {
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, #1a73e8, #0d47a1);
+    background: linear-gradient(135deg, #165DFF, #1149CC);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -129,7 +129,7 @@ nav {
 
 /* Buttons */
 .btn-primary {
-    background-color: #1a73e8;
+    background-color: #165DFF;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -142,7 +142,7 @@ nav {
 }
 
 .btn-primary:hover {
-    background-color: #1557b0;
+    background-color: #1149CC;
 }
 
 .btn-secondary {
@@ -160,7 +160,7 @@ nav {
 
 .btn-secondary:hover {
     background-color: white;
-    color: #1a73e8;
+    color: #165DFF;
 }
 
 /* Features Section */
@@ -172,7 +172,7 @@ nav {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #333;
+    color: #111111;
 }
 
 .features-grid {
@@ -198,17 +198,17 @@ nav {
 .feature-card h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #333;
+    color: #111111;
 }
 
 .feature-card p {
     margin-bottom: 20px;
-    color: #666;
+    color: #555555;
 }
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #f8f9fa;
+    background-color: #F5F7FA;
     padding: 80px 0;
 }
 
@@ -216,7 +216,7 @@ nav {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #333;
+    color: #111111;
 }
 
 .testimonials-grid {
@@ -242,12 +242,12 @@ nav {
 .testimonial-card h4 {
     font-size: 16px;
     margin-bottom: 5px;
-    color: #333;
+    color: #111111;
 }
 
 .testimonial-card .job-title {
     font-size: 14px;
-    color: #999;
+    color: #777777;
 }
 
 /* Templates Section */
@@ -278,12 +278,12 @@ nav {
 .template-card h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #333;
+    color: #111111;
 }
 
 .template-card p {
     margin-bottom: 20px;
-    color: #666;
+    color: #555555;
 }
 
 /* Cover Letter Section */
@@ -302,14 +302,14 @@ nav {
 .cover-letter-card h3 {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #333;
-    border-bottom: 2px solid #1a73e8;
+    color: #111111;
+    border-bottom: 2px solid #165DFF;
     padding-bottom: 10px;
 }
 
 .cover-letter-content {
     line-height: 1.8;
-    color: #333;
+    color: #111111;
 }
 
 .cover-letter-content p {
@@ -337,11 +337,11 @@ nav {
 .question-card h3 {
     font-size: 16px;
     margin-bottom: 15px;
-    color: #333;
+    color: #111111;
 }
 
 .question-card .answer {
-    color: #666;
+    color: #555555;
     font-size: 14px;
 }
 
@@ -369,7 +369,7 @@ nav {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #333;
+    color: #111111;
 }
 
 .form-group input {
@@ -392,7 +392,7 @@ nav {
 
 .keywords-result h3 {
     margin-bottom: 20px;
-    color: #333;
+    color: #111111;
 }
 
 .keywords-list {
@@ -402,8 +402,8 @@ nav {
 }
 
 .keyword-tag {
-    background-color: #e3f2fd;
-    color: #1a73e8;
+    background-color: #E8F4FD;
+    color: #165DFF;
     padding: 8px 12px;
     border-radius: 20px;
     font-size: 14px;
@@ -428,20 +428,20 @@ nav {
 .plan-card h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #333;
+    color: #111111;
 }
 
 .price {
     font-size: 48px;
     font-weight: bold;
-    color: #1a73e8;
+    color: #165DFF;
     margin-bottom: 30px;
 }
 
 .price span {
     font-size: 20px;
     font-weight: normal;
-    color: #666;
+    color: #555555;
 }
 
 .plan-features {
@@ -452,7 +452,7 @@ nav {
 
 .plan-features li {
     margin-bottom: 15px;
-    color: #333;
+    color: #111111;
     font-size: 16px;
 }
 
@@ -464,17 +464,17 @@ nav {
 .ad-top,
 .ad-bottom {
     padding: 20px 0;
-    background-color: #f8f9fa;
+    background-color: #F5F7FA;
 }
 
 .ad-placeholder {
-    background-color: #e0e0e0;
+    background-color: #E0E0E0;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    color: #666;
+    color: #555555;
     font-weight: 500;
 }
 
