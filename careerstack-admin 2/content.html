@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容管理 - CareerStack 管理后台</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>CareerStack</h2>
+            <p>管理后台</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">
+                <span class="icon">📊</span>
+                <span>数据看板</span>
+            </a>
+            <a href="users.html">
+                <span class="icon">👥</span>
+                <span>用户管理</span>
+            </a>
+            <a href="content.html" class="active">
+                <span class="icon">📝</span>
+                <span>内容管理</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button onclick="logout()" class="btn-logout">
+                <span class="icon">🚪</span>
+                <span>退出登录</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 顶部栏 -->
+        <header class="top-bar">
+            <h1>内容管理</h1>
+            <div class="user-info">
+                <span>管理员</span>
+            </div>
+        </header>
+
+        <!-- 内容编辑区 -->
+        <div class="content-edit-grid">
+            <!-- 网站标题设置 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h3>🌐 网站标题</h3>
+                    <p>修改网站首页标题</p>
+                </div>
+                <form id="siteTitleForm">
+                    <div class="form-group">
+                        <label>网站主标题</label>
+                        <input type="text" id="siteTitle" placeholder="CareerStack">
+                    </div>
+                    <div class="form-group">
+                        <label>网站副标题</label>
+                        <input type="text" id="siteSubtitle" placeholder="Your All-in-One Job Search Toolkit">
+                    </div>
+                    <button type="submit" class="btn-primary">保存修改</button>
+                </form>
+            </div>
+
+            <!-- Pro 订阅设置 -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h3>💎 Pro 订阅设置</h3>
+                    <p>修改订阅价格和描述</p>
+                </div>
+                <form id="proSettingsForm">
+                    <div class="form-group">
+                        <label>订阅价格（美元）</label>
+                        <input type="number" id="proPrice" step="0.01" placeholder="9.99">
+                    </div>
+                    <div class="form-group">
+                        <label>订阅周期</label>
+                        <select id="proPeriod">
+                            <option value="month">每月</option>
+                            <option value="year">每年</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>订阅描述</label>
+                        <textarea id="proDescription" rows="3" placeholder="解锁所有模板 + 无限关键词工具 + 无广告"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>功能列表（每行一个）</label>
+                        <textarea id="proFeatures" rows="5" placeholder="✅ Access to all resume templates
+✅ Unlimited keyword optimization
+✅ Ad-free experience
+✅ Priority support"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">保存修改</button>
+                </form>
+            </div>
+
+            <!-- 页面内容设置 -->
+            <div class="content-card full-width">
+                <div class="card-header">
+                    <h3>📄 页面内容</h3>
+                    <p>修改各页面标题和描述</p>
+                </div>
+                <form id="pageContentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>简历模板页面标题</label>
+                            <input type="text" id="resumePageTitle" placeholder="ATS-Friendly Resume Templates">
+                        </div>
+                        <div class="form-group">
+                            <label>简历模板页面描述</label>
+                            <input type="text" id="resumePageDesc" placeholder="8 professionally designed templates plus 3 complete resume samples">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>求职信页面标题</label>
+                            <input type="text" id="coverPageTitle" placeholder="Professional Cover Letter Templates">
+                        </div>
+                        <div class="form-group">
+                            <label>求职信页面描述</label>
+                            <input type="text" id="coverPageDesc" placeholder="8 customizable samples for every career stage and industry">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>面试准备页面标题</label>
+                            <input type="text" id="interviewPageTitle" placeholder="Interview Preparation Guide">
+                        </div>
+                        <div class="form-group">
+                            <label>面试准备页面描述</label>
+                            <input type="text" id="interviewPageDesc" placeholder="50 common interview questions with sample answers">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">保存修改</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- 提示消息 -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/content.js"></script>
+</body>
+</html>

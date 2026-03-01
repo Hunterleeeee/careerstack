@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据看板 - CareerStack 管理后台</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>CareerStack</h2>
+            <p>管理后台</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="active">
+                <span class="icon">📊</span>
+                <span>数据看板</span>
+            </a>
+            <a href="users.html">
+                <span class="icon">👥</span>
+                <span>用户管理</span>
+            </a>
+            <a href="content.html">
+                <span class="icon">📝</span>
+                <span>内容管理</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button onclick="logout()" class="btn-logout">
+                <span class="icon">🚪</span>
+                <span>退出登录</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 顶部栏 -->
+        <header class="top-bar">
+            <h1>数据看板</h1>
+            <div class="user-info">
+                <span>管理员</span>
+            </div>
+        </header>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-info">
+                    <h3>总订阅人数</h3>
+                    <p class="stat-number" id="totalSubscribers">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-info">
+                    <h3>月收入（美元）</h3>
+                    <p class="stat-number" id="monthlyRevenue">$0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <h3>今日新增订阅</h3>
+                    <p class="stat-number" id="todayNew">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <h3>活跃订阅</h3>
+                    <p class="stat-number" id="activeSubscribers">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最近订阅 -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>最近订阅</h2>
+                <a href="users.html" class="btn-link">查看全部 →</a>
+            </div>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>用户邮箱</th>
+                            <th>订阅时间</th>
+                            <th>PayPal 订阅ID</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentSubscribers">
+                        <!-- 动态生成 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

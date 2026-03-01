@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理 - CareerStack 管理后台</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>CareerStack</h2>
+            <p>管理后台</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">
+                <span class="icon">📊</span>
+                <span>数据看板</span>
+            </a>
+            <a href="users.html" class="active">
+                <span class="icon">👥</span>
+                <span>用户管理</span>
+            </a>
+            <a href="content.html">
+                <span class="icon">📝</span>
+                <span>内容管理</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button onclick="logout()" class="btn-logout">
+                <span class="icon">🚪</span>
+                <span>退出登录</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 顶部栏 -->
+        <header class="top-bar">
+            <h1>用户管理</h1>
+            <div class="top-actions">
+                <button class="btn-secondary" onclick="exportData()">📥 导出数据</button>
+                <button class="btn-primary" onclick="openAddModal()">➕ 添加用户</button>
+            </div>
+        </header>
+
+        <!-- 筛选栏 -->
+        <div class="filter-bar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索邮箱或订阅ID...">
+                <button onclick="searchUsers()">🔍</button>
+            </div>
+            <select id="statusFilter" onchange="filterUsers()">
+                <option value="">全部状态</option>
+                <option value="active">活跃</option>
+                <option value="cancelled">已取消</option>
+            </select>
+        </div>
+
+        <!-- 用户列表 -->
+        <div class="content-section">
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>用户邮箱</th>
+                            <th>订阅时间</th>
+                            <th>PayPal 订阅ID</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- 动态生成 -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination" id="pagination">
+                <!-- 分页 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 添加用户弹窗 -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>添加订阅用户</h3>
+                <button class="btn-close" onclick="closeAddModal()">×</button>
+            </div>
+            <form id="addUserForm">
+                <div class="form-group">
+                    <label>用户邮箱</label>
+                    <input type="email" id="newUserEmail" required placeholder="user@example.com">
+                </div>
+                <div class="form-group">
+                    <label>PayPal 订阅ID</label>
+                    <input type="text" id="newUserSubscriptionId" required placeholder="I-XXXXXXXXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label>订阅状态</label>
+                    <select id="newUserStatus">
+                        <option value="active">活跃</option>
+                        <option value="cancelled">已取消</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" onclick="closeAddModal()">取消</button>
+                    <button type="submit" class="btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/users.js"></script>
+</body>
+</html>
