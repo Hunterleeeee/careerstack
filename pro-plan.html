@@ -54,9 +54,28 @@
                     <li>✅ Ad-free experience</li>
                     <li>✅ Priority support</li>
                 </ul>
-                <!-- Stripe Payment Button -->
+                <!-- Payment Button -->
                 <div class="payment-button">
-                    <button id="stripe-button" class="btn-primary">Upgrade Now</button>
+                    <div id="paypal-button-container-P-67W07786RA371025HNGR2JBY"></div>
+                    <script src="https://www.paypal.com/sdk/js?client-id=ARWmqhAsYKZFoTU33Ce3jTkDaHG-lgq9Sa69XC0JBmXaKwvGIxorZyGG7WPpBVGbJq0BA0tWRAN6Yg2h&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+                    <script>
+                      paypal.Buttons({
+                          style: {
+                              shape: 'rect',
+                              color: 'blue',
+                              layout: 'vertical',
+                              label: 'subscribe'
+                          },
+                          createSubscription: function(data, actions) {
+                            return actions.subscription.create({
+                              plan_id: 'P-67W07786RA371025HNGR2JBY'
+                            });
+                          },
+                          onApprove: function(data, actions) {
+                            alert(data.subscriptionID);
+                          }
+                      }).render('#paypal-button-container-P-67W07786RA371025HNGR2JBY');
+                    </script>
                 </div>
             </div>
         </div>
